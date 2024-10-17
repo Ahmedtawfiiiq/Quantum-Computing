@@ -8,6 +8,6 @@ S = np.sqrt(Z)
 T = np.array([[1, 0], [0, np.exp(1j * np.pi / 4)]], dtype=complex)
 V = np.sqrt(X)
 Rz = lambda theta: np.array([[np.exp(-1j * theta / 2), 0], [0, np.exp(1j * theta / 2)]], dtype=complex)
+reset = np.array([[1, 1], [0, 0]], dtype=complex)
 
-print(X)
-print(np.allclose(np.power(V, 2), X))
+print(reset @ reset.T)
